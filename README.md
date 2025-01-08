@@ -17,6 +17,12 @@
 ## Infos
 
 Since FiveM decided to [block certain natives](https://github.com/citizenfx/fivem/blob/b3ef62afa7e70d9139b54590ee2cbaef34ab71a4/code/components/rage-scripting-five/src/scrEngine.cpp#L34), here is how some anticheats instantly detected cheats like TZ. 
-Some GTA 5 natives have full access to memory, such as `DataarrayGetString`, which takes a memory address as a parameter and attempts to read an integer from a given address. In my script, the `CheckMemory` function uses `DataarrayGetString` to read data from a provided memory address. If the read is successful, it returns a string representing the location of the data found at the memory address, such as "Fd3d10.dll"; otherwise, it returns "NoData."
-For loops and calculations are used to break down a number into its hexadecimal components, creating addresses where a specific component or file we aim to detect, is located.
-ZeroTrust Anticheat does not include this kind of practice, as it goes against FiveM's rules.
+
+Some GTA 5 natives have full access to memory, such as `DataarrayGetString`, which takes a memory address as a parameter and attempts to read an integer from a given address. In my script, the `CheckMemory` function uses `DataarrayGetString` to read data from a provided memory address. If the read is successful, it returns a string representing the location of the data found at the memory address, such as "Fd3d10.dll"; otherwise, it returns "NoData".
+
+For loops and calculations are used to break down a number into its hexadecimal components, creating addresses where a specific component or file we aim to detect, is located (which has surely been changed).
+
+This detection has never been perfect because the location of memory addresses can vary depending on the operating system.
+If two programs or libraries conflict over a particular memory space, the operating system may reallocate the addresses of one or the other.
+
+⚠ [ZeroTrust Anticheat](https://zerotrust-ac.net) does not include this kind of practice, as it goes against FiveM's rules. ⚠
