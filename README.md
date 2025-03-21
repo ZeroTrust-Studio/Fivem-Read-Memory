@@ -16,9 +16,9 @@
 
 ## Infos
 
-This is how some anticheats did to instantly detect cheats like TZ. 
+Since fivem decided to block [certain natives](https://github.com/citizenfx/fivem/blob/master/code/components/rage-scripting-five/src/scrEngine.cpp#L34), here is how some anticheats instantly detected cheats like TZ. 
 
-Some GTA 5 natives have full access to memory, such as `DataarrayGetInt`, which takes a memory address as a parameter and attempts to read an integer from a given address. In my script, the `CheckMemory` function uses `DataarrayGetInt` to read data from a provided memory address. If the read is successful, it returns an integer representing the location of the data found at the memory address.
+Some GTA 5 natives have full access to memory, such as `DataarrayGetInt`, which takes a memory address as an argument and attempts to read an integer from a given address. In my script, the `CheckMemory` function uses `DataarrayGetInt` to read data from a provided memory address. If the reading is successful, it returns an integer representing the location of the data found at the memory address.
 
 For loops and calculations are used to break down a number into its hexadecimal components, creating addresses where a specific component or file we aim to detect, is located (which has since been changed).
 
