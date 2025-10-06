@@ -4,7 +4,7 @@
 
 ### Note
 
-![Banner](https://i.postimg.cc/4NhQT5Yz/Screenshot-9.png)
+![Banner](https://cdn.sacul.cloud/zerotrust/banner.png)
 
 [ZeroTrust](https://zerotrust.tebex.io/package/6603820) is a powerful FiveM anticheat designed to ensure fair play with extremely advanced features like Anti-Spoof and Anti-Stop. It combines intelligent detection systems to block cheats, prevent exploits, and keep your server secure while providing a seamless gaming experience.
 
